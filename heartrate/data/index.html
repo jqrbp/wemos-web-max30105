@@ -1,0 +1,109 @@
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script src="plotly-basic.min.js"></script>
+    <script src="wshandler.js"></script>
+    </head>
+    <body>
+    <div class="navbar fixed-top d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Visualisasi Data Detak Jantung</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="#grafik">Grafik</a>
+            <a class="p-2 text-dark" href="#data">Data</a>
+            <a class="p-2 text-dark" href="#log">Log</a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="jumbotron bg-white" id="grafik">
+            <h2>Grafik</h2>
+            <div name="plot" id="chart" style="min-width: 100%;"></div>
+        </div>
+        <div class="card-deck mb-4 text-center">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Validasi</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title" style="color:transparent; text-shadow: 0 0 0 gray" id="dvalid">&#10084;</h1>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Kal. Cepat</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><span id="dfast">000.00</span> <small class="text-muted">bpm</small></h1>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Rata-Rata</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><span id="dave">0</span> <small class="text-muted">bpm</small></h1>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Sampling</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><span id="dhr">0</span> <small class="text-muted">bpm</small></h1>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">SPO2</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title"><span id="dspo">0</span> <small class="text-muted">%</small></h1>
+                </div>
+            </div>
+        </div>
+        <div id="data">
+            <h2>Data</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                  <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Nilai</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>IR</td>
+                      <td><input type="text" name="ir" id="ir"></td>
+                    </tr>
+                    <tr>
+                      <td>Red</td>
+                      <td><input type="text" name="red" id="red"></td>
+                    </tr>
+                    <tr>
+                      <td>Detak</td>
+                      <td><input type="text" name="bpm" id="bpm">bpm</td>
+                    </tr>
+                    <tr>
+                      <td>Rata-Rata</td>
+                      <td><input type="ave" name="red" id="ave">bpm</td>
+                    </tr>
+                    <tr>
+                      <td>Sampel</td>
+                      <td><input type="text" name="hr" id="hr">bpm</td>
+                    </tr>
+                    <tr>
+                      <td>SPO2</td>
+                      <td><input type="text" name="spo" id="spo">%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>
+        <div id="log">
+            <h2>Log</h2>
+            <textarea id=r readonly rows=50 style="min-width: 100%;"></textarea>
+        </div>
+    </div>
+    </body>
+</html>
