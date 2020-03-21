@@ -1,5 +1,6 @@
 # wemos-web-max30105
-Data Visualization of max30105 using wemos D1 R1 board 
+Data Visualization of max30105 on wemos D1 R1 board 
+An HTML page including javascript file for handling the websocket communication data were embedded to the board via ESP8266 SPIFFS plugin.
 
 Components:
 
